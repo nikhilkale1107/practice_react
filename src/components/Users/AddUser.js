@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
-import classes from "./AddUser";
+import classes from "./AddUser.module.css";
 import ErrorModal from "../UI/ErrorModal";
 
 function AddUser(props) {
@@ -42,7 +42,7 @@ function AddUser(props) {
   function errorHandler () {
     setError(null);
   };
-  
+
   return (
     <div>
       {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}/>}
